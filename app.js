@@ -1,29 +1,9 @@
-// const hamburger = document.querySelector(".hamburger");
-// const navMenu = document.querySelector(".nav__menu");
-// const navLink = document.querySelectorAll(".nav-link");
-
-// hamburger.addEventListener("click", mobileMenu);
-// navLink.forEach(n => n.addEventListener("click", closeMenu));
-
-// function mobileMenu() {
-//     hamburger.classList.toggle("active");
-//     navMenu.classList.toggle("active");
-// }
-
-// function closeMenu() {
-//     hamburger.classList.remove("active");
-//     navMenu.classList.remove("active");
-// }
-
-
-
-
 (() =>{
  
-    const openNavMenu = document.querySelector(".open-nav-menu"),
-    closeNavMenu = document.querySelector(".close-nav-menu"),
-    navMenu = document.querySelector(".nav-menu"),
-    menuOverlay = document.querySelector(".menu-overlay"),
+    const openNavMenu = document.querySelector(".nav__menu-open"),
+    closeNavMenu = document.querySelector(".nav__menu-close"),
+    navMenu = document.querySelector(".nav__menu"),
+    menuOverlay = document.querySelector(".nav__menu-overlay"),
     mediaSize = 991;
   
     openNavMenu.addEventListener("click", toggleNav);
@@ -49,20 +29,20 @@
           }
           else{
             // collapse existing expanded menuItemHasChildren
-            if(navMenu.querySelector(".menu-item-has-children.active")){
+            if(navMenu.querySelector(".nav__item-child.active")){
               collapseSubMenu();
             }
             // expand new menuItemHasChildren
             menuItemHasChildren.classList.add("active");
-            const subMenu = menuItemHasChildren.querySelector(".sub-menu");
+            const subMenu = menuItemHasChildren.querySelector(".nav__dropdown");
             subMenu.style.maxHeight = subMenu.scrollHeight + "px";
           }
         }
     });
     function collapseSubMenu(){
-        navMenu.querySelector(".menu-item-has-children.active .sub-menu")
+        navMenu.querySelector(".nav__item-child.active .nav__dropdown")
         .removeAttribute("style");
-        navMenu.querySelector(".menu-item-has-children.active")
+        navMenu.querySelector(".nav__item-child.active")
         .classList.remove("active");
     }
     function resizeFix(){
@@ -71,7 +51,7 @@
              toggleNav();
          }
          // if menuItemHasChildren is expanded , collapse it
-         if(navMenu.querySelector(".menu-item-has-children.active")){
+         if(navMenu.querySelector(".nav__item-child.active")){
               collapseSubMenu();
        }
     }
