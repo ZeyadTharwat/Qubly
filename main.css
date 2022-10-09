@@ -799,6 +799,7 @@ color: #160637;
 
 	/* TESTIMONIALS SECTION */
   .testimonials{
+	clip-path: polygon(0 20%, 100% 0, 100% 80%, 0% 100%);
 	background: linear-gradient(175.54deg, rgb(249, 240, 255,0.47) 25.81%, rgb(226, 241, 255,0.47) 96.38%);
 	padding-top: 145px;
 	padding-bottom: 116.5px;
