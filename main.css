@@ -599,6 +599,7 @@ color: #160637;
 	.teams__img {
 	  margin-top: 50px;
 	  margin-left: auto;
+	  margin-right: auto;
 	}
   }
   @media only screen and (max-width: 768px) {
