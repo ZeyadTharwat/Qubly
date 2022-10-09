@@ -841,10 +841,16 @@ color: #160637;
   }
   @media only screen and (max-width: 768px) {
 	.testimonials__clients {
-	gap: 30px;
+	gap: 75px;
 	}
 	.testimonials__header br {
 		display: none;
+	}
+  }
+
+  @media only screen and (max-width: 576px) {
+	.testimonials__clients {
+	gap: 40px;
 	}
   }
 
