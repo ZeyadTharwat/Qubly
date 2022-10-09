@@ -361,7 +361,7 @@ border: 1px solid white;
   @media only screen and (max-width: 768px) {
 	.hero {
 	  padding-top: 10px;
-	  padding-bottom: 100px;
+	  padding-bottom: 120px;
 	}
 	.hero__main-title{
 		max-width: 100%;
@@ -503,7 +503,7 @@ color: #160637;
 
 	  @media only screen and (max-width: 768px) {
 		.features{
-			padding-top: 60px;
+			padding-top: 40px;
 		}
 		.features__cards{
 			flex-direction: column;
