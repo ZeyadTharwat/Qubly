@@ -1,3 +1,30 @@
+// Loading Spinner + Reveal sections
+const sec = document.querySelectorAll("section");
+const header = document.querySelector("header");
+const nav = document.querySelector("nav");
+const hot = document.querySelector(".hot-fix");
+sec.forEach(function(section){
+    section.style.display="none";
+});
+header.style.display="none";
+nav.style.display="none";
+hot.style.display="none";
+function hideLoader(){
+    document.getElementById("section-loader").style.display="none";
+    sec.forEach(function(section){
+        section.style.display="block";
+    });
+    header.style.display="block";
+    nav.style.display="block";
+    hot.style.display="block";
+    /*==================== SCROLL REVEAL ANIMATION ====================*/
+};
+// // document.onload = hideLoader();
+setTimeout(hideLoader , 1000);
+
+// End Loading Spinner + reveal
+
+
 (() =>{
  
     const openNavMenu = document.querySelector(".nav__menu-open"),
@@ -8,7 +35,7 @@
   
     openNavMenu.addEventListener("click", toggleNav);
     closeNavMenu.addEventListener("click", toggleNav);
-    // close the navMenu by clicking outside
+
     menuOverlay.addEventListener("click", toggleNav);
   
     function toggleNav() {
@@ -20,19 +47,19 @@
     navMenu.addEventListener("click", (event) =>{
         if(event.target.hasAttribute("data-toggle") && 
             window.innerWidth <= mediaSize){
-            // prevent default anchor click behavior
-            event.preventDefault();
+
+              event.preventDefault();
             const menuItemHasChildren = event.target.parentElement;
-          // if menuItemHasChildren is already expanded, collapse it
-          if(menuItemHasChildren.classList.contains("active")){
+
+            if(menuItemHasChildren.classList.contains("active")){
               collapseSubMenu();
           }
           else{
-            // collapse existing expanded menuItemHasChildren
+
             if(navMenu.querySelector(".nav__item-child.active")){
               collapseSubMenu();
             }
-            // expand new menuItemHasChildren
+
             menuItemHasChildren.classList.add("active");
             const subMenu = menuItemHasChildren.querySelector(".nav__dropdown");
             subMenu.style.maxHeight = subMenu.scrollHeight + "px";
@@ -46,11 +73,11 @@
         .classList.remove("active");
     }
     function resizeFix(){
-         // if navMenu is open ,close it
-         if(navMenu.classList.contains("open")){
+
+      if(navMenu.classList.contains("open")){
              toggleNav();
          }
-         // if menuItemHasChildren is expanded , collapse it
+
          if(navMenu.querySelector(".nav__item-child.active")){
               collapseSubMenu();
        }
