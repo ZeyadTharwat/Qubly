@@ -10,21 +10,22 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
     integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   </head>
   <body>
-    <div id="section-loader">
+    <!-- <div id="section-loader">
       <div class="loader">
         <div></div>
         <div></div>
       </div>
     </div>
-
+ -->
                                             <!--NAVBAR-->
-                                            <div class="hot-fix"></div>
+<!-- <div class="hot-fix"></div> -->
 <div class="main-sec-bg">
       <!-- header start -->
-  <header class="nav">
-    <div class="container">
+  <header class="nav" data-aos-easing="linear" data-aos-duration="1000" data-aos="fade-down">
+    <div class="container" >
        <div class="nav__main">
           <div>
              <a href="#">
@@ -74,7 +75,7 @@
 
                                             <!--HERO SECTION-->
 
-    <section class="hero">
+    <section class="hero" data-aos-easing="linear" data-aos-duration="1000" data-aos="fade-down">
       <div class="container">
         <div class="hero__content">
           <div class="hero__main-title">
@@ -105,7 +106,7 @@
 
                                             <!--FEATURES SECTION-->
 
-<section class="features">
+<section class="features" data-aos-easing="linear" data-aos-duration="1000" data-aos="fade-down">
   <div class="container">
     <div class="features__content">
       <div class="features__header">
@@ -146,7 +147,7 @@
 
                                             <!--TEAMS SECTION-->
 
-    <section class="teams">
+    <section class="teams" data-aos-easing="linear" data-aos-duration="1000" data-aos="fade-down">
       <div class="container">
         <div class="teams__content">
           <div class="teams__img">
@@ -175,7 +176,7 @@
 
                                             <!--TIMELINE SECTION-->
 
-    <section class="timeline">
+    <section class="timeline" data-aos-easing="linear" data-aos-duration="1000" data-aos="fade-down">
       <div class="">
         <div class="timeline__content">
           <div class="timeline__main-title">
@@ -204,7 +205,7 @@
 
                                             <!--TESTIMONIALS SECTION-->
 
-<section class="testimonials">
+<section class="testimonials" data-aos-easing="linear" data-aos-duration="1000" data-aos="fade-down">
     <div class="container">
       <div class="testimonials__content">
         <p class="testimonials__header">"What I love about Qubly is the easy way we can collaborate even if there is a lot <br>of people involved in the process"</p>
@@ -227,7 +228,7 @@
                                             <!--TESTIMONIALS SECTION-->
 
                                             <!--SIGNUP SECTION-->
-<section id="login" class="sign-up">
+<section id="login" class="sign-up" data-aos-easing="linear" data-aos-duration="1000" data-aos="fade-down">
   <div class="container">
     <div class="sign-up__content">
       <div class="sign-up__left-eye">
@@ -247,24 +248,24 @@
         </div>
       </div>
 
-      <div class="form">
-      <div class="form-overlay">
-        <div class="form-content">
+      <div class="sign-up__form">
+      <div class="sign-up__form-overlay">
+        <div class="sign-up__form-content">
           <h1 class="sign-up__header">Sign Up</h1>
           <div class="media-options">
-              <a href="#" class=" google">
+              <a href="#" class="sign-up__trial">
                   Start your free trial
               </a>
           </div>    
           <form action="#">
-            <div class="field input-field">
+            <div class="sign-up__field input-field">
               <input type="password" placeholder="Your primary email" class="password">
           </div>
-            <div class="field input-field">
+            <div class="sign-up__field input-field">
             <input type="password" placeholder="Password" class="password">
         </div>
 
-              <div class="field input-field">
+              <div class="sign-up__field input-field">
                   <input type="password" placeholder="Re-type Password" class="password">
               </div>
           </form>
@@ -297,7 +298,7 @@
 
 
                                             <!--FOOTER-->
-  <!-- <footer class="footer">
+  <footer id="footer" class="footer" data-aos-easing="linear" data-aos-duration="1000" data-aos="fade-down">
   	 <div class="container">
   	 	<div class="row">
         <div class="col-4">
@@ -357,15 +358,22 @@
 
   	 		<div class="col-2">
   	 			<h4 class="footer__list-header">Newsletter</h4>
-            <div class="email-box">
-              <input type="text" class="email-box__input" placeholder="Email Address" />
-              <button type="button" class="email-box__button"><img src="assets/Icon ionic-ios-send.svg" alt=""></button>
+           <form action="" class="footer-email">
+            <div  class="input-holder">
+              <input type="email" class="form-control" placeholder="Email">
+              <img class="" src="assets/Icon ionic-ios-send.svg" alt="">
             </div>
-  	 		</div>
+            </form>
+   </div>
   	 	</div>
   	 </div>
-  </footer> -->
+  </footer>
                                             <!--FOOTER-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
   <script src="js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/9d667afad8.js" crossorigin="anonymous"></script>  
 	<script src="app.js"></script>
