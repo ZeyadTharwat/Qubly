@@ -1214,6 +1214,8 @@ justify-content: center;
 
 
 #footer .input-holder {
+  background-color: white;
+  color: white;
   box-shadow: 4px 4px 12px rgba(137, 137, 162, 0.122);
   padding:6px 12px 6px 16px;
   display: flex !important;
