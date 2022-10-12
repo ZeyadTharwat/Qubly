@@ -1,25 +1,25 @@
-// const sec = document.querySelectorAll("section");
-// const hero = document.querySelector(".hero");
-// const nav = document.querySelector("nav");
-// const hot = document.querySelector(".hot-fix");
-// sec.forEach(function(section){
-//     section.style.display="none";
-// });
-// hero.style.display="none";
-// nav.style.display="none";
-// hot.style.display="none";
-// function hideLoader(){
-//     document.getElementById("section-loader").style.display="none";
-//     sec.forEach(function(section){
-//         section.style.display="block";
-//     });
-//     hero.style.display="block";
-//     nav.style.display="block";
-//     hot.style.display="block";
+const sec = document.querySelectorAll("section");
+const header = document.querySelector("header");
+const nav = document.querySelector("nav");
+const hot = document.querySelector(".hot-fix");
+sec.forEach(function(section){
+    section.style.display="none";
+});
+header.style.display="none";
+nav.style.display="none";
+hot.style.display="none";
+function hideLoader(){
+    document.getElementById("section-loader").style.display="none";
+    sec.forEach(function(section){
+        section.style.display="block";
+    });
+    header.style.display="block";
+    nav.style.display="block";
+    hot.style.display="block";
 
-// setTimeout(hideLoader , 2000);
+  };
 
-//   }
+  setTimeout(hideLoader , 2000);
 
 (() =>{
  
