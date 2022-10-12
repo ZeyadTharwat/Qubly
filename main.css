@@ -1237,15 +1237,10 @@ justify-content: center;
 .footer__copyrights{
   display: flex;
   justify-content: center;
-  margin-bottom: 19px;
+  padding-bottom: 19px;
 }
 
-@media only screen and (max-width: 1024px) {
-}
 @media only screen and (max-width: 768px) {
-  .footer br {
-    display: none;
-  }
   .col-2 {
     width: 50%;
     margin-bottom: 30px;
